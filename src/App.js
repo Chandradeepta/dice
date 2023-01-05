@@ -38,6 +38,10 @@ function App() {
       <Sort selectedSort={selectedSort} handleSort={handleSort} />
       <div className="container pt-4 text-center">
         <div className="row row-cols-1 row-cols-md-1 g-4">
+          {
+            repositories.length < 1 && searchTerm && <p>No Results Found</p>
+          }
+          
           {repositories.map((repo) => {
             return (
               <div
