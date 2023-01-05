@@ -1,4 +1,4 @@
-# dice
+# Dice: Search Public Github Repositories
 
 To Get Started, rename file `.env.local` to `.env` and add your Github Personal Access Token
 
