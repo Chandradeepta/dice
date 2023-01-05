@@ -7,7 +7,7 @@ const sortBy = [
   },
   {
     label: "Watchers Count",
-    name: "Watchers Count",
+    name: "watchers_count",
   },
   {
     label: "Score",
@@ -37,12 +37,12 @@ export default function Sort({ selectedSort, handleSort }) {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {selectedSort?.name || "Sort By"}
+          {selectedSort?.label || "Sort By"}
         </button>
         <ul className="dropdown-menu">
           {sortBy.map((each) => {
             return (
-              <li key={each.name} onClick={() => handleSort(each)}>
+              <li key={each.name} style={{cursor: 'pointer'}} onClick={() => handleSort(each)}>
                 {each.label}
               </li>
             );
